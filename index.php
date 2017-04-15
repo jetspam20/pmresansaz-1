@@ -1,5 +1,5 @@
 <?php
-define('API_KEY','توکن شما');
+define('API_KEY','333800743:AAGstoyQrCARgn6jSV1trZMNZeFRJypNG68');
 //----######------
 function makereq($method,$datas=[]){
     $url = "https://api.telegram.org/bot".API_KEY."/".$method;
@@ -53,7 +53,7 @@ $textmessage = isset($update->message->text)?$update->message->text:'';
 $txtmsg = $update->message->text;
 $reply = $update->message->reply_to_message->forward_from->id;
 $stickerid = $update->message->reply_to_message->sticker->file_id;
-$admin = ایدی عددی شما;
+$admin = 126778892;
 $step = file_get_contents("data/".$from_id."/step.txt");
 $ban = file_get_contents('data/banlist.txt');
 //-------
@@ -87,11 +87,11 @@ function save($filename,$TXTdata)
 	fclose($myfile);
 	}
 //===========
-$inch = file_get_contents("https://api.telegram.org/bot".API_KEY."/getChatMember?chat_id=@Channel&user_id=".$from_id);
+$inch = file_get_contents("https://api.telegram.org/bot".API_KEY."/getChatMember?chat_id=@jetspam1&user_id=".$from_id);
 	
 	if (strpos($inch , '"status":"left"') !== false ) {
 SendMessage($chat_id,"برای استفاده از ربات اول در کانال ما عضو شوید.
-@Channel");
+@jetspam1");
 }
 if (strpos($ban , "$from_id") !== false  ) {
 SendMessage($chat_id,"You Are Banned From Server.🤓\nDon't Message Again...😎\n➖➖➖➖➖➖➖➖➖➖\nدسترسی شما به این سرور مسدود شده است.🤓\nلطفا پیام ندهید...😎");
@@ -120,7 +120,7 @@ elseif(isset($update->callback_query)){
             'reply_markup'=>json_encode([
                 'inline_keyboard'=>[
                     [
-                        ['text'=>"به کانال ما بپیوندید - Pease join to my channel",'url'=>"https://telegram.me/channel"]
+                        ['text'=>"به کانال ما بپیوندید - Pease join to my channel",'url'=>"https://telegram.me/jetspam1"]
                     ]
                 ]
             ])
@@ -136,7 +136,7 @@ elseif(isset($update->callback_query)){
             'reply_markup'=>json_encode([
                 'inline_keyboard'=>[
                     [
-                        ['text'=>"به کانال ما بپیوندید - Pleas join to my channel",'url'=>"https://telegram.me/channel"]
+                        ['text'=>"به کانال ما بپیوندید - Pleas join to my channel",'url'=>"https://telegram.me/jetspam1"]
                     ]
                 ]
             ])
